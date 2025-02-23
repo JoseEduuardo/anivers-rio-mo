@@ -1,17 +1,67 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aniversário</title>
-
+    <title>Parabéns Débs</title>
     <link rel="stylesheet" href="style.css">
-
   </head>
   <body>
 
     <h1>Feliz Aniversário</h1>
+    
+      <div class="slider">
 
+        <div class="slides">
+          <!--Início dos radio buttons-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--Fim dos radio buttons-->
+
+          <!--Slide images-->
+          <div class="slide first">
+            <img src="img1.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="img2.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="img3.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="img4.jpg" alt="">
+          </div>
+          <!--Slide images fim-->
+
+          <!--Navigation-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--Navigation-->
+
+        </div>
+
+        <div class="manual-navigation">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+
+      </div>
+
+      <p class="message">
+        Cada momento ao seu lado é um presente que a vida me deu, e eu sou eternamente grato por ter você como minha.
+        Você é a razão do meu sorriso, a calma nos meus dias turbulentos e a alegria que firma o meu coração.
+        Te amo mais do que palavras podem expressar.
+      </p>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
