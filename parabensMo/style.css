@@ -1,54 +1,111 @@
-h1 {
+h1, p{
     text-align: center;
+    color: white;
 }
 
-body {
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
     width: 100%;
     height: 100%;
+    background: blue;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
     justify-content: center;
+    height: 100vh;
+}
+
+.wrapper .card{
+    background: #fff;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    justify-content: space-between;
+    border-radius: 100px 20px 20px 100px;
+    animation: animate 15s linear infinite;
+    animation-delay: calc(3s * var(--delay));
+}
+
+.wrapper:hover .card{
+    animation-play-state: paused;
+}
+
+.wrapper .card:last-child{
+    animation-delay: calc(3s * var(--delay));
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: translateY(100%) scale(0.5);
+    }
+    5%, 20%{
+        opacity: 0.4;
+        transform: translateY(100%) scale(0.7);
+    }
+    25%, 40%{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0%) scale(1);
+    }
+    45%, 60%{
+        opacity: 0.4;
+        transform: translateY(-100%) scale(0.7);
+    }
+    65%, 100%{
+        opacity: 0;
+        transform: translateY(-100%) scale(0.5);
+    }
+}
+
+.card .content{
+    display: flex;
     align-items: center;
 }
 
-.slider {
-    margin: 0 auto;
-    width: 200px;
-    height: 400px;
-    overflow: hidden;
-}
-
-.slides {
-    width: 400px;
-    height: 400px;
-    display: flex;
-}
-
-.slides input {
-    display: none;
-}
-
-.slide {
-    width: 25%;
-    position: relative;
-}
-
-.slide img{
-    width: 600px;
-}
-
-.manual-navigation {
+.wrapper .card .img{
+    height: 90px;
+    width: 90px;
     position: absolute;
-    width: 400px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
+    left: -5px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,2);
 }
 
-.manual-btn{
-    border: 2px solid #fff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
+.card .img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card .details{
+    margin-left: 80px;
+}
+
+.details span{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card a{
+    text-decoration: none;
+    padding: 7px 18px;
+    border-radius: 25px;
+    color: #fff;
+    background: linear-gradient(to bottom, blue 0%, rgba(47, 0, 255, 0.467) 100% );
 }
