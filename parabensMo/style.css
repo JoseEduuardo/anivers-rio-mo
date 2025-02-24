@@ -1,6 +1,21 @@
-h1, p{
+h1, h3{
     text-align: center;
     color: white;
+    margin-top: 20px;
+}
+
+.initialimg{
+    border-radius: 30px;
+    width: 20vh;
+    height: 30vh;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+p, span{
+    margin-left: 60px;
 }
 
 *{
@@ -13,14 +28,23 @@ h1, p{
 body{
     width: 100%;
     height: 100%;
-    background: blue;
+    background: rgb(0, 0, 0);
+}
+
+.message{
+    margin: 10px;
+    color: #fff;
+}
+
+.motivos{
+    margin-top: 80px;
 }
 
 .wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 45vh;
 }
 
 .wrapper .card{
@@ -100,12 +124,4 @@ body{
 .details span{
     font-weight: 600;
     font-size: 18px;
-}
-
-.card a{
-    text-decoration: none;
-    padding: 7px 18px;
-    border-radius: 25px;
-    color: #fff;
-    background: linear-gradient(to bottom, blue 0%, rgba(47, 0, 255, 0.467) 100% );
 }
