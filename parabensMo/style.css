@@ -3,7 +3,11 @@ h1, h3{
     color: white;
     margin-top: 20px;
     font-size: 25px;
-    margin: 30px;
+    margin-bottom: 0px !important;
+}
+
+.title{
+    font-size: 30px;
 }
 
 .initialimg{
