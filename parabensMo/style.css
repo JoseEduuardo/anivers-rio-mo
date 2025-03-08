@@ -193,26 +193,26 @@ body{
 
 .coracao {
     position: fixed;
-    font-size: 30px;
-    opacity: 0.6;
+    color: blue;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     animation: descer 5s linear forwards;
-    z-index: -1; /* Mantém os corações atrás de tudo */
-    pointer-events: none; /* Impede que os corações interfiram nos toques no celular */
-}
-
-@keyframes descer {
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  @keyframes descer {
     0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
+      transform: translateY(0) scale(1);
+      opacity: 1;
     }
     100% {
-        transform: translateY(100vh) scale(0.5);
-        opacity: 0;
+      transform: translateY(100vh) scale(0.5);
+      opacity: 0;
     }
-}
+  }
+  
 
 .fixed-header {
     position: fixed;
