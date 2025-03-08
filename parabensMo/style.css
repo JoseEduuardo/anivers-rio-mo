@@ -249,8 +249,8 @@ body{
 }
 
 .love-note-img {
-    width: 100%;
+    width: 40vh;
     height: auto;
     display: block;
-  }
-  
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
