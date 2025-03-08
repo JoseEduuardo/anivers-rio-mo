@@ -1,5 +1,6 @@
+// Atualiza o contador de tempo
 function atualizarContador() {
-  const dataInicial = new Date(Date.UTC(2024, 11, 12, 0, 0, 0)); // Mês em JS começa do 0 (Janeiro = 0, Dezembro = 11)
+  const dataInicial = new Date(Date.UTC(2024, 11, 12, 0, 0, 0)); // Dezembro = 11 em JS
   const agora = new Date();
 
   let diferenca = agora - dataInicial;
@@ -21,43 +22,42 @@ function atualizarContador() {
   document.getElementById("meses").textContent = String(meses).padStart(2, "0");
   document.getElementById("dias").textContent = String(dias).padStart(2, "0");
   document.getElementById("horas").textContent = String(horas).padStart(2, "0");
-  document.getElementById("minutos").textContent = String(minutos).padStart(
-    2,
-    "0"
-  );
-  document.getElementById("segundos").textContent = String(segundos).padStart(
-    2,
-    "0"
-  );
+  document.getElementById("minutos").textContent = String(minutos).padStart(2, "0");
+  document.getElementById("segundos").textContent = String(segundos).padStart(2, "0");
 }
 
 // Garante que o script só inicie quando o DOM estiver carregado
 document.addEventListener("DOMContentLoaded", function () {
-  setInterval(atualizarContador, 1000);
   atualizarContador();
+  setInterval(atualizarContador, 1000);
 });
 
+// Criar corações animados
 document.addEventListener("DOMContentLoaded", function () {
   function criarCoracao() {
     const coracao = document.createElement("div");
     coracao.classList.add("coracao");
-    coracao.innerHTML = "💙"; // Agora é um coração azul 💙
+    coracao.innerHTML = "💙"; // Coração azul
 
     // Define posição aleatória na largura da tela
     coracao.style.left = `${Math.random() * 100}vw`; 
-    coracao.style.top = "0px"; // Inicia no topo
-    coracao.style.position = "fixed"; // Garante que ele fica fixo
-    coracao.style.animationDuration = `${Math.random() * 3 + 2}s`; // Duração aleatória
+    coracao.style.position = "fixed";
+    coracao.style.top = "-10px"; // Começa um pouco acima
+    coracao.style.fontSize = `${Math.random() * 20 + 20}px`; // Tamanhos variados
+    coracao.style.opacity = Math.random() * 0.5 + 0.5; // Opacidade entre 0.5 e 1
+
+    // Aplica animação com duração aleatória entre 3s e 5s
+    const duracao = Math.random() * 3 + 2;
+    coracao.style.animation = `descer ${duracao}s linear`;
 
     document.body.appendChild(coracao);
 
-    // Remove após a animação
+    // Remove o coração após a animação
     setTimeout(() => {
       coracao.remove();
-    }, 5000);
+    }, duracao * 1000);
   }
 
   // Criar corações continuamente
-  setInterval(criarCoracao, 300);
+  setInterval(criarCoracao, 500);
 });
-

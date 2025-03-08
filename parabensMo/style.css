@@ -195,11 +195,12 @@ body{
     position: fixed;
     font-size: 30px;
     opacity: 0.6;
-    top: 0; /* Começa no topo */
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     animation: descer 5s linear forwards;
-    z-index: -1; /* Coloca os corações atrás de tudo */
+    z-index: -1; /* Mantém os corações atrás de tudo */
+    pointer-events: none; /* Impede que os corações interfiram nos toques no celular */
 }
 
 @keyframes descer {
