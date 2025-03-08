@@ -36,3 +36,28 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(atualizarContador, 1000);
   atualizarContador();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  function criarCoracao() {
+    const coracao = document.createElement("div");
+    coracao.classList.add("coracao");
+    coracao.innerHTML = "💙"; // Agora é um coração azul 💙
+
+    // Define posição aleatória na largura da tela
+    coracao.style.left = `${Math.random() * 100}vw`; 
+    coracao.style.top = "0px"; // Inicia no topo
+    coracao.style.position = "fixed"; // Garante que ele fica fixo
+    coracao.style.animationDuration = `${Math.random() * 3 + 2}s`; // Duração aleatória
+
+    document.body.appendChild(coracao);
+
+    // Remove após a animação
+    setTimeout(() => {
+      coracao.remove();
+    }, 5000);
+  }
+
+  // Criar corações continuamente
+  setInterval(criarCoracao, 300);
+});
+
