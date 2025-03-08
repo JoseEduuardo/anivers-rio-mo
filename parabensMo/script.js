@@ -1,5 +1,5 @@
 function atualizarContador() {
-  const dataInicial = new Date("2024-12-12T00:00:00");
+  const dataInicial = new Date(Date.UTC(2024, 11, 12, 0, 0, 0)); // Mês em JS começa do 0 (Janeiro = 0, Dezembro = 11)
   const agora = new Date();
 
   let diferenca = agora - dataInicial;
@@ -31,5 +31,8 @@ function atualizarContador() {
   );
 }
 
-setInterval(atualizarContador, 1000);
-atualizarContador();
+// Garante que o script só inicie quando o DOM estiver carregado
+document.addEventListener("DOMContentLoaded", function () {
+  setInterval(atualizarContador, 1000);
+  atualizarContador();
+});
