@@ -228,3 +228,29 @@ body{
     font-weight: bold;
     z-index: 1000;
 }
+
+.love-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.love-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.love-img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.love-note-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
